@@ -1,0 +1,16 @@
+{
+    "name": "taugust/portfolio",
+    "description": "Starter Portfolio für Tom August, ein Azubi bei VIOSYS",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Taugust\\Portfolio\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Tom August"
+        }
+    ],
+    "require": {}
+}

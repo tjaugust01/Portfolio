@@ -30,6 +30,6 @@ Um das Projekt lokal auszuführen, kannst du die folgenden Schritte befolgen:
     cd mein-portfolio
 3. Öffne die index.php-Datei in deinem Webbrowser.
 
-
-
-
+## Weitere Dokumentationen
+- [Planung und Ziele](PLANNING.md)
+- [Entwicklungsregeln](RULES.md)

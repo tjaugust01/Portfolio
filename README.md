@@ -9,7 +9,7 @@ Falls du Feedback oder Fragen hast, nutze bitte das Kontaktformular auf dieser S
 Vielen Dank für deine Unterstützung!
 
 ## Projektbeschreibung
-Dies ist mein persönliches Portfolio, das meine Fähigkeiten in HTML, CSS und PHP demonstriert. Hier möchte ich meine Kenntnisse in der Webentwicklung erweitern und verschiedene Techniken ausprobieren, um sowohl für mich als auch für potenzielle Arbeitgeber sichtbar zu werden..
+Dies ist mein persönliches Portfolio, das meine Fähigkeiten in HTML, CSS und PHP demonstriert. Hier möchte ich meine Kenntnisse in der Webentwicklung erweitern und verschiedene Techniken ausprobieren.
 
 
 

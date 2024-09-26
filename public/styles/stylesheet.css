@@ -1,0 +1,149 @@
+html {
+    height: 100%; /* Höhe auf 100% setzen */
+    background: radial-gradient(circle, #303030, #000000);
+}
+
+body {
+    display: flex; /* Flexbox aktivieren */
+    justify-content: center; /* Horizontal zentrieren */
+    align-items: center; /* Vertikal zentrieren */
+    height: 100vh; /* Höhe des Viewports verwenden */
+    margin: 0; /* Standardmargins entfernen */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr; /* 3 Spalten */
+    grid-template-rows: repeat(7, 1fr); /* 7 Zeilen */
+    gap: 10px; /* Abstand zwischen den Grid-Elementen */
+    width: 90%; /* 90% der Breite des Bildschirms */
+    height: 80%; /* 80% der Höhe des Bildschirms */
+    max-width: 80%; /* Maximale Breite setzen */
+    max-height: 80%; /* Maximale Höhe setzen */
+    position: relative;
+}
+
+.item {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.icon {
+    grid-column: 1 / 2; /* Icon nimmt die gesamte erste Spalte ein */
+    grid-row: 1 / 8; /* Icon nimmt alle 7 Zeilen ein */
+    align-self: center;
+}
+
+.icon img {
+    max-width: 100%;
+    height: auto;
+}
+
+.headline {
+    grid-column: 2 / 3; /* Headline und Paragraph in der zweiten Spalte */
+    grid-row: 1 / 8; /* Headline und Paragraph nehmen die ersten zwei Zeilen ein */
+    color: white;
+    text-align: center;
+    align-self: center;
+}
+
+.headline h1 {
+    margin: 0;
+}
+.gallery {
+    grid-column: 3 / 4; 
+    grid-row: 1 / 8; 
+    overflow: hidden; /* Versteckt den Überlauf */
+    position: relative;
+    perspective: 1000px; /* Perspektive für 3D-Effekt */
+}
+
+.gallery ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 5s ease-in-out; /* Animation für das Scrollen, Dauer auf 1 Sekunde gesetzt */
+}
+
+.gallery ul li {
+    flex: 0 0 100%; /* Jedes Listenelement nimmt die volle Höhe ein */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 2s ease-in-out, opacity 2s ease-in-out; /* Dauer auf 1 Sekunde gesetzt */
+    position: absolute;
+    width: 90%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 100%; 
+}
+
+.gallery ul li a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    text-align: center;
+}
+
+.gallery ul li img {
+    width: 100%; /* Bild auf die volle Breite des Listenelements setzen */
+    height: auto;
+    display: block;
+    border-radius: 15px;
+}
+
+.gallery ul li p {
+    margin: 5px 0 0 0;
+    color: white;
+}
+
+.gallery ul li.inactive {
+    opacity: 0;
+    transform: scale(0.8)  
+}
+
+.gallery ul li.prev {
+    transform: scale(0.8) translateY(-150%) rotateX(30deg);
+    opacity: 0.5;
+}
+
+.gallery ul li.next {
+    transform: scale(0.8) translateY(50%) rotateX(-30deg);
+    opacity: 0.5;
+}
+
+
+
+.container::before,
+.container::after {
+    content: '';
+    position: absolute;
+    width: 150px; /* Länge des sichtbaren Rahmens */
+    height: 150px; /* Breite des sichtbaren Rahmens */
+    border-width: 20px;
+    border-style: solid;
+    clip-path: polygon(0 0, 100% 0, 0 100%); /* Schräg abgeschnitten */
+}
+
+/* Farbverlauf für die obere linke Ecke */
+.container::before {
+    top: 0;
+    left: 0;
+    border-right: none;
+    border-bottom: none;
+    border-image: linear-gradient(45deg, yellow, lightgray, yellow) 1; /* Gelb zu Grau zu Gelb */
+}
+
+/* Farbverlauf für die untere rechte Ecke */
+.container::after {
+    bottom: 0;
+    right: 0;
+    border-left: none;
+    border-top: none;
+    clip-path: polygon(100% 100%, 100% 0, 0 100%); /* Schräg in die andere Richtung */
+    border-image: linear-gradient(45deg, yellow, lightgray, yellow) 1; /* Gelb zu Grau zu Gelb */
+}

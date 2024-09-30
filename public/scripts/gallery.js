@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (event.deltaY > 0) {
             currentIndex = (currentIndex + 1) % items.length;
         } else {
-            currentIndex = (currentIndex - 1 + items.length) % items.length;
+            currentIndex = (currentIndex - 1 + items.length) % items.length;AQ
         }
         showItem(currentIndex);
     }

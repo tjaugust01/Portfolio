@@ -4,49 +4,58 @@
 <head>  
     <title>My Portfolio</title>
     <link rel="stylesheet" href="public/styles/stylesheet.css">
-    <link rel="icon" type="image/x-icon" href="public/images/Designer_k_2024-09-26_18_30_08-removebg-preview.png">
+    <link rel="icon" type="image/x-icon" href="public/images/Logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 <div class="container">
+<div class="headicon">
+    <div class="socials">
+        <a href="https://github.com/tjaugust01/Portfolio" target="_blank">
+            <img src="public/images/github-mark-white.svg" style="height: 35px; width: auto; opacity: 75%; margin-right: 10px;"  alt="github"> </a>
+        <a href="mailto:tomaugust2001@proton.me" target="_blank">
+            <img src="public/images/mail.svg" style="height: 35px; width: auto; opacity: 75%; color: #ffffff;margin-right: 10px;" alt="Mail Kontakt"> </a>
+        <a href="https://read.cv/tjaugust01" target="_blank">
+            <img src="public/images/readcv.svg" style="height: 30px; width: auto; opacity: 75%; color: #ffffff;margin-right: 10px;" alt="About me"> </a>  
+    </div>
     <div class="item icon">
-        <img src="public/images/Designer_k_2024-09-26_18_30_08-removebg-preview.png" alt="Mein Design">
+        <img src="public/images/Logo.png" alt="Mein Design">
     </div>
-    <div class="item headline">
-        <h1>Willkommen!</h1>
-        <p>Hier findest du meine Projekte und Designs.</p>
-    </div>
-    <div class="item gallery">
+</div>
+<div class="item headline" id="headline">
+    <p id="greeting">Hello</p>
+    <p>My name is Tom, and I am an aspiring developer from Germany with a passion for technology and design.</p>
+</div>
+
+
+
+    <div class="item gallery" id="gallery">
         <ul>
-            <li>
-                <a href="link/to/project1">
-                    <img src="public/images/placeholder.png" alt="Projekt 1">
-                    <p>Projekt 1 Beschreibung</p>
+            <li id="project1" data-headline="traineeproject">
+                <a href="traineeproject.html">
+                    <img src="public/images/placeholder.png" alt="traineeproject">
+                    <p>traineeproject</p>
                 </a>
             </li>
-            <li>
+            <li id="project2" data-headline="Projekt 2 Beschreibung">
                 <a href="link/to/project2">
                     <img src="public/images/placeholder.png" alt="Projekt 2">
                     <p>Projekt 2 Beschreibung</p>
                 </a>
             </li>
-            <li>
+            <li id="project3" data-headline="Projekt 3 Beschreibung">
                 <a href="link/to/project3">
                     <img src="public/images/placeholder.png" alt="Projekt 3">
                     <p>Projekt 3 Beschreibung</p>
                 </a>
             </li>
-             <li>    
-                <a href="link/to/project3">
-                    <img src="public/images/placeholder.png" alt="Projekt 3">
-                    <p>Projekt 4 Beschreibung</p>
-                </a>
-            </li>
-            <!-- Weitere Projekte hier hinzufügen -->
         </ul>
     </div>
 </div>
 </body>
 </html>
 <script src="public/scripts/gallery.js"></script>
+<script src="public/scripts/hello.js"></script>
 </body>
 </html>
+    
